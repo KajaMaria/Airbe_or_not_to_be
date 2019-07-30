@@ -13,7 +13,12 @@
 ActiveRecord::Schema.define(version: 2019_07_29_134626) do
 
   create_table "listings", force: :cascade do |t|
-    t.string "address"
+    t.string "title"
+    t.string "address_first_line"
+    t.string "address_second_line"
+    t.string "address_post_code"
+    t.string "address_city"
+    t.string "address_country"
     t.string "description"
     t.string "price"
     t.datetime "created_at", null: false

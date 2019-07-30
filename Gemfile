@@ -33,6 +33,12 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# check rubygems to see what the latest version is
+gem 'bulma-rails', '~> 0.7.4'
+
+# optional
+gem 'bulma-extensions-rails'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 

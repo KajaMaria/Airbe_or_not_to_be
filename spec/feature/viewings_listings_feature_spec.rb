@@ -1,16 +1,23 @@
 require 'rails_helper'
 
 feature "expect to see one of the properties" do
-  scenario "See properties" do
-    Listing.create(address: 'sw11 3re', description: 'Born to be wild', price: 3000)
-    Listing.create(address: 'kt6 7ls', description: 'Born to be wild', price: 3000)
-    Listing.create(address: 'sw16 8fb', description: 'Born to be wild', price: 3000)
-    Listing.create(address: 'sw11 9re', description: 'Born to be wild', price: 3000)
+  before "creates some fake listings" do
+    @listing1 = Listing.create(title: 'Big Ben', address_city: 'London', address_post_code: 'SW1A 0AA', address_first_line: 'Big Ben' , address_second_line: 'Westminster', address_country: 'UK', description: 'Beautiful views over the city. Close to major tourist attractions. Watch Boris Johnson bumble about. Great for clock enthusiasts.',price:400)
+    @listing2 = Listing.create(title: 'Barbican Centre', address_city: 'London', address_post_code: 'EC2Y 8DS', address_first_line: 'Barbican Centre' , address_second_line: 'Silk Street', address_country: 'UK', description: 'Modern spacious retro-style apartments. Great for fans of brutalist architecture. Nearby art gallery and gardens.',price:200)
     visit '/listings/index'
+  end
+
+  scenario "See properties" do
+    expect(page).to have_content(@listing1.title)
+    expect(page).to have_content(@listing2.title)
+  end
+
+  scenario "can click through to see individual property listing" do
+    click_link(@listing1.title)
     sleep(2)
-    expect(page).to have_content("kt6 7ls")
-    expect(page).to have_content("sw11 3re")
-    expect(page).to have_content("sw16 8fb")
-    expect(page).to have_content("sw11 9re")
+    expect(page).to have_content(@listing1.address_first_line)
+    expect(page).to have_content(@listing1.address_second_line)
+    expect(page).to have_content(@listing1.description)
+    expect(page).to have_content(@listing1.price)
   end
 end
