@@ -17,6 +17,9 @@ feature "expect to see one of the properties" do
     sleep(2)
     expect(page).to have_content(@listing1.address_first_line)
     expect(page).to have_content(@listing1.address_second_line)
+    expect(page).to have_content(@listing1.address_post_code)
+    expect(page).to have_content(@listing1.address_city)
+    expect(page).to have_content(@listing1.address_country)
     expect(page).to have_content(@listing1.description)
     expect(page).to have_content(@listing1.price)
   end

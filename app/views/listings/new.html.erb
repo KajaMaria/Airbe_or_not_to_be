@@ -1,2 +1,5 @@
 <h1>Listings#new</h1>
-<p>Find me in app/views/listings/new.html.erb</p>
+
+<%= form_with model: @listing do |form| %>
+<%= form.text_field :address_first_line, placeholder: "address(first line)" %>
+<%= form.text_field :address_second_line, placeholder: "address(second line)" %>
