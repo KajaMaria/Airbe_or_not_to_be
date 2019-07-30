@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
-  
+
   end
 
   def new
@@ -13,8 +13,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    p 'these are the userparams'
-    p user_params
+
     user = User.create(user_params)
     redirect_to users_path
   end

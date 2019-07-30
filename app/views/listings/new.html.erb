@@ -3,3 +3,12 @@
 <%= form_with model: @listing do |form| %>
 <%= form.text_field :address_first_line, placeholder: "address(first line)" %>
 <%= form.text_field :address_second_line, placeholder: "address(second line)" %>
+<%= form.text_field :address_post_code, placeholder: "post code" %>
+<%= form.text_field :address_city, placeholder: "city" %>
+<%= form.text_field :address_country, placeholder: "country" %>
+<%= form.text_field :title, placeholder: "title" %>
+<%= form.text_field :description, placeholder: "description" %>
+<%= form.text_field :price, placeholder: "price" %>
+<%= form.submit %>
+
+<%end%>

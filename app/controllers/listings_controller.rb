@@ -8,10 +8,26 @@ class ListingsController < ApplicationController
   end
 
   def new
-    listing = Listing.new
-    @listing = listing.create(params[:title], params[:address_city], params[:address_post_code], params[:address_city], params[:address_country], params[:address_first_line], params[:address_second_line], params[:description], params[:price])
+    @listing = Listing.new
   end
+
+  def create
+
+    listing = Listing.create(listing_params)
+
+    redirect_to listings_index_path
+  end
+
+
 
   def edit
   end
+
+  private
+
+  def listing_params
+
+    params.require(:listing).permit(:title, :address_first_line, :address_second_line, :address_post_code, :address_city, :address_country, :description, :price)
+
+  end 
 end
