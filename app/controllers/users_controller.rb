@@ -4,19 +4,24 @@ class UsersController < ApplicationController
   end
 
   def show
-  
+
   end
 
   def new
     @user = User.new
-    p @user
   end
 
   def create
-    p 'these are the userparams'
-    p user_params
     user = User.create(user_params)
-    redirect_to users_path
+    # flashes a notification if invalid
+    if user.save
+      session[:user_id] = user.id
+      flash[:success] = 'Successfully created user!'
+      redirect_to users_path
+    else
+      flash[:warning] = 'Invalid email or password'
+      redirect_to '/user/new'
+    end
   end
 
   def edit
