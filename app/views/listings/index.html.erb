@@ -2,6 +2,6 @@
 <p>Find me in app/views/listings/index.html.erb</p>
 
 <div> <% @listings.each do |listing|  %>
-       <%= listing.address %>
+       <div><%= link_to listing.title, listing_path(listing) %></div>
        <% end %>
 </div>
