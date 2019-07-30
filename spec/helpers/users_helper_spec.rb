@@ -19,7 +19,7 @@ def signup
   fill_in 'name', with: 'Ian Aquino'
   fill_in 'username', with: 'iamanewuser'
   fill_in 'email', with: 'thisismyemail@yahoo.com'
-  fill_in 'phone_number', with: 1235678901
+  fill_in 'user[phone_number]', with: 'hellooo'
   fill_in 'password', with: 'password123'
-  click_button 'Save'
+  click_button 'Create User'
 end
