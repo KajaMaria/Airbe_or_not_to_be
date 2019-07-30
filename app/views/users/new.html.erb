@@ -1,0 +1,11 @@
+<h1>Welcome to Fight Club! </h1>
+
+<%= form_with model: @user do |form| %>
+  <%= form.text_field :username, placeholder: "username" %>
+  <%= form.text_field :name, placeholder: "name" %>
+  <%= form.text_field :email, placeholder: "email" %>
+  <%= form.text_field :phone_number, placeholder: "phone number" %>
+  <%= form.text_field :password, placeholder: "password" %>
+
+  <%= form.submit %>
+<% end %>
