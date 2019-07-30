@@ -1,4 +1,7 @@
 <h1>Listings#index</h1>
 <p>Find me in app/views/listings/index.html.erb</p>
 
-<div> Born to be wild </div>
+<div> <% @listings.each do |listing|  %>
+       <%= listing.address %>
+       <% end %>
+</div>
