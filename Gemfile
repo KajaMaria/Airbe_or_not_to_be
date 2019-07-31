@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
+
+
 # encryption
 gem 'bcrypt-ruby'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -60,6 +62,8 @@ group :development do
 end
 
 group :test do
+  gem 'simplecov', require: false
+  gem 'simplecov-console', require: false
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
