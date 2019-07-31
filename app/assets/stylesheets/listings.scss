@@ -4,6 +4,10 @@
 @import "bulma";
 @import "bulma-extensions";
 
+.listing-expand-button {
+  cursor: pointer;
+}
+
 html, body {
   margin: 0;
   height: 100%;
