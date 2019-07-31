@@ -3,3 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bulma";
 @import "bulma-extensions";
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+body {
+  background-image: image-url('picture.jpg');
+  height: 100%;
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: -50px;
+}
