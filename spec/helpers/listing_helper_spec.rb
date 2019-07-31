@@ -2,6 +2,7 @@ require 'rails_helper'
 
 def new_listing
 
+  signup 
   visit '/listings/new'
   fill_in 'address(first line)', :with => '123 London Road'
   fill_in 'address(second line)', :with => 'Camberwell'
