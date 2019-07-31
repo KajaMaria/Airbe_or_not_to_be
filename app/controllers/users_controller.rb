@@ -17,10 +17,10 @@ class UsersController < ApplicationController
     if user.save
       session[:user_id] = user.id
       flash[:success] = 'Successfully created user!'
-      redirect_to users_path
-    else
-      flash[:warning] = 'Invalid email or password'
-      redirect_to '/user/new'
+      redirect_to listings_index_path
+    # else     will implement when 2 users use same email
+    #   flash[:warning] = 'Invalid email or password'
+    #   redirect_to '/user/new'
     end
   end
 
