@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 2019_07_30_094911) do
 
   create_table "listings", force: :cascade do |t|
+    t.integer "user_id"
     t.string "title"
     t.string "address_first_line"
     t.string "address_second_line"
@@ -23,6 +24,7 @@ ActiveRecord::Schema.define(version: 2019_07_30_094911) do
     t.string "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_listings_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
