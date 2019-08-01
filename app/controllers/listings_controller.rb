@@ -2,7 +2,7 @@ class ListingsController < ApplicationController
 
   def index
     @listings = Listing.all
-    
+
   end
 
   def show
@@ -14,8 +14,19 @@ class ListingsController < ApplicationController
   end
 
   def create
+    p start_date = params[:listing][:from_date]
+    p end_date = params[:listing][:from_date]
+
+    p parsed_start = Date.parse(start_date)
+    p parsed_end = Date.parse(end_date)
+
     @user = User.find(session[:user_id])
     @listing = @user.listings.create(listing_params)
+
+    (parsed_start..parsed_end).each do |date|
+      @booking = @listing.bookings.create(date: date, availability: true)
+    end
+
     redirect_to listings_index_path
   end
 
