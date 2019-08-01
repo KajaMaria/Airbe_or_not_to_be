@@ -11,19 +11,14 @@
     <p>£<%= @listing.price %> per night</p>
 
 
-    <div class="field">
-      <label class="label">Subject</label>
-      <div class="control">
-        <div class="select">
-          <%= select_tag "Avilable Dates", options_from_collection_for_select(@bookings,"id", "date")%>
-        </div>
-      </div>
-    </div>
 
 
 
-    <!-- <% @bookings.each do |booking| %>
-      <%= booking.date %>
-    <% end %> -->
+    <% @bookings.each do |booking| %>
+      <p><%= booking.date %></p>
+    <% end %>
+
+    <%= button_to "Make a request", '/requests/new', method: :get %>
+
 
 </div>
