@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'requests/index'
+  get 'requests/show'
+  get 'requests/new'
   get 'users/index'
   get 'users/show'
   get 'users/new'
@@ -9,15 +12,16 @@ Rails.application.routes.draw do
   get 'listings/new'
   get 'listings/edit'
 
-  # get '/signup' => 'users#new'
+  get '/signup' => 'users#new'
   # post '/users' => 'users#create'
 
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
-  get '/logout' => 'sessions#destroy' 
+  get '/logout' => 'sessions#destroy'
 
   resources :listings
   resources :users
+  resources :requests
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
