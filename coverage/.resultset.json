@@ -1,7 +1,44 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/kajapolkowska/Desktop/Makers_Course/Airbe_or_not_to_be/app/controllers/sessions_controller.rb": [
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/app/controllers/requests_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/spec/controllers/sessions_controller_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/app/controllers/sessions_controller.rb": [
         1,
         null,
         1,
@@ -27,21 +64,7 @@
         null,
         null
       ],
-      "/Users/kajapolkowska/Desktop/Makers_Course/Airbe_or_not_to_be/app/controllers/application_controller.rb": [
-        1,
-        1,
-        null,
-        1,
-        0,
-        null,
-        1,
-        null,
-        1,
-        0,
-        null,
-        null
-      ],
-      "/Users/kajapolkowska/Desktop/Makers_Course/Airbe_or_not_to_be/spec/controllers/users_controller_spec.rb": [
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/spec/controllers/users_controller_spec.rb": [
         1,
         null,
         1,
@@ -83,7 +106,7 @@
         null,
         null
       ],
-      "/Users/kajapolkowska/Desktop/Makers_Course/Airbe_or_not_to_be/app/controllers/users_controller.rb": [
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/app/controllers/users_controller.rb": [
         1,
         1,
         1,
@@ -123,7 +146,7 @@
         null,
         null
       ],
-      "/Users/kajapolkowska/Desktop/Makers_Course/Airbe_or_not_to_be/spec/feature/add_user_signup_feature_spec.rb": [
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/spec/feature/add_user_signup_feature_spec.rb": [
         1,
         null,
         null,
@@ -154,7 +177,7 @@
         null,
         null
       ],
-      "/Users/kajapolkowska/Desktop/Makers_Course/Airbe_or_not_to_be/spec/feature/create_a_listing_feature_spec.rb": [
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/spec/feature/create_a_listing_feature_spec.rb": [
         1,
         null,
         1,
@@ -167,7 +190,7 @@
         null,
         null
       ],
-      "/Users/kajapolkowska/Desktop/Makers_Course/Airbe_or_not_to_be/spec/feature/logging_in_feauture_spec.rb": [
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/spec/feature/logging_in_feauture_spec.rb": [
         1,
         null,
         1,
@@ -188,7 +211,7 @@
         null,
         null
       ],
-      "/Users/kajapolkowska/Desktop/Makers_Course/Airbe_or_not_to_be/spec/feature/viewings_listings_feature_spec.rb": [
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/spec/feature/viewings_listings_feature_spec.rb": [
         1,
         null,
         1,
@@ -218,7 +241,7 @@
         null,
         null
       ],
-      "/Users/kajapolkowska/Desktop/Makers_Course/Airbe_or_not_to_be/spec/helpers/listing_helper_spec.rb": [
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/spec/helpers/listing_helper_spec.rb": [
         1,
         null,
         1,
@@ -239,7 +262,24 @@
         null,
         null
       ],
-      "/Users/kajapolkowska/Desktop/Makers_Course/Airbe_or_not_to_be/spec/helpers/sessions_helper_spec.rb": [
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/spec/helpers/requests_helper_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/spec/helpers/sessions_helper_spec.rb": [
         1,
         null,
         null,
@@ -256,7 +296,7 @@
         null,
         null
       ],
-      "/Users/kajapolkowska/Desktop/Makers_Course/Airbe_or_not_to_be/spec/helpers/users_helper_spec.rb": [
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/spec/helpers/users_helper_spec.rb": [
         1,
         null,
         null,
@@ -290,37 +330,65 @@
         4,
         null
       ],
-      "/Users/kajapolkowska/Desktop/Makers_Course/Airbe_or_not_to_be/spec/models/booking_spec.rb": [
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/spec/models/booking_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/Users/kajapolkowska/Desktop/Makers_Course/Airbe_or_not_to_be/app/models/booking.rb": [
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/app/models/booking.rb": [
         1,
         1,
         null
       ],
-      "/Users/kajapolkowska/Desktop/Makers_Course/Airbe_or_not_to_be/app/models/application_record.rb": [
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/kajapolkowska/Desktop/Makers_Course/Airbe_or_not_to_be/spec/models/user_spec.rb": [
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/spec/models/request_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/app/models/request.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/spec/models/user_spec.rb": [
         1,
         null,
         null,
         null,
         null
       ],
-      "/Users/kajapolkowska/Desktop/Makers_Course/Airbe_or_not_to_be/app/models/user.rb": [
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/spec/views/requests/new.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/spec/views/requests/show.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/app/models/user.rb": [
+        1,
         1,
         1,
         1,
         null
       ],
-      "/Users/kajapolkowska/Desktop/Makers_Course/Airbe_or_not_to_be/app/controllers/listings_controller.rb": [
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/app/controllers/listings_controller.rb": [
         1,
         null,
         1,
@@ -373,13 +441,14 @@
         null,
         null
       ],
-      "/Users/kajapolkowska/Desktop/Makers_Course/Airbe_or_not_to_be/app/models/listing.rb": [
+      "/Users/student/Projects/Weekly-Projects/Airbe_or_not_to_be/app/models/listing.rb": [
+        1,
         1,
         1,
         1,
         null
       ]
     },
-    "timestamp": 1564660165
+    "timestamp": 1564668292
   }
 }

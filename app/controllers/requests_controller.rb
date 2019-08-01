@@ -1,12 +1,13 @@
 class RequestsController < ApplicationController
 
   def index
-    @requests = Request.all
+    @requests = Request.where(user_id: session[:user_id])
 
   end
 
   def show
-    @request = Request.listings.find()
+    @request = Request.find(params[:id])
+
   end
 
   def new
