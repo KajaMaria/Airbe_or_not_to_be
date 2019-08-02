@@ -1,9 +1,23 @@
 
 
-<div> <% @listings.each do |listing|  %>
-       <div><%= link_to listing.title, listing_path(listing) %></div>
-       <% end %>
+
+
+<h1>Listings#index</h1>
+<p>Find me in app/views/listings/index.html.erb</p>
+
+<div class="container listing-list">
+  <% @listings.each do |listing| %>
+    <div class="card listing">
+      <div class="card-content">
+        <h2 class="title">
+          <span class="listing-title"><%= link_to listing.title, listing_path(listing) %></span>
+          <span class="listing-expand-button">[+]</span>
+        </h2>
+        <p hidden class="content listing-description"> <%= listing.description %> </p>
+      </div>
+    </div>
+  <% end %>
 </div>
 
 
-<%= button_to "New Listing", { action: "new" }, method: :get, class: "my_class" %>
+<%= button_to "New Listing", { action: "new" }, method: :get, class: "buttons" %>

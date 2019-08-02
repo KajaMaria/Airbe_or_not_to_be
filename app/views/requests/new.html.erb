@@ -1,0 +1,21 @@
+<h1>Requests#new</h1>
+<p>Find me in app/views/requests/new.html.erb</p>
+
+<%= @user.name %>
+<%= @listing.title  %>
+
+
+
+
+    <%= form_tag("/requests", method: "post") do %>
+      <div class="field">
+        <label class="label">Subject</label>
+        <div class="control">
+          <div class="select">
+            <%= select_tag "availability", options_from_collection_for_select(@bookings,"id", "date")%>
+          </div>
+        </div>
+      </div>
+
+      <%= submit_tag("Send request") %>
+    <% end %>
