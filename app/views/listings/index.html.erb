@@ -10,10 +10,21 @@
   </div>
 
 
-<div class="container listing-list">
+<div class="container is-centered listing-list columns is-multiline">
   <% @listings.each do |listing| %>
-   
-    <div class="card listing">
+
+    <div class="card column is-narrow listing">
+        <div class="card-image">
+          <figure class="image is-4by3">
+
+            <% if listing.picture.attached? %>
+                <image src="<%=(url_for(listing.picture))%>">
+            <% else %>
+            <img src="https://pixabay.com/get/57e8dd454c50ac14f6da8c7dda6d49214b6ac3e45657754e712c7bd296/log-cabin-1886620_1280.jpg" alt="Placeholder image">
+            <% end %>
+            <!-- <img src="https://pixabay.com/get/57e8dd454c50ac14f6da8c7dda6d49214b6ac3e45657754e712c7bd296/log-cabin-1886620_1280.jpg" alt="Placeholder image"> -->
+          </figure>
+        </div>
       <div class="card-content">
         <h2 class="title">
           <span class="listing-title"><%= link_to listing.title, listing_path(listing) %></span>

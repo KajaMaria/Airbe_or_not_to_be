@@ -12,45 +12,54 @@
   </div>
 <div class="card-content">
 <div class="media">
-  <div class="media-left">
+  <!-- <div class="media-left">
     <figure class="image is-24x24">
 
     </figure>
-  </div>
+  </div> -->
 
 
   <div class="field media content">
-    <p class="control title is-4"> <%= @listing.title %> </p>
-      <p class="subtitle is-6"><%= @listing.description %> </p>
+    <!-- <p class="control title is-3"> <%= @listing.title %> </p> -->
+      <p class="subtitle pacifico is-1">"<%= @listing.description %>"</p>
   </div>
 </div>
 
+<div class="columns is-2">
 
-<div>
-    <p class="subtitle">
-      <%= @listing.address_first_line %>
-    </p>
-  </div>
-
-
+<div class="column our-little-box box box-radius box-background-color box-padding box-shadow">
+  <p class="control subtitle is-3"> <%= @listing.title %></p>
+  <div class="is-size-4">
+    <p> <%= @listing.address_first_line %> </p>
     <p><%= @listing.address_second_line %></p>
     <p><%= @listing.address_post_code %></p>
     <p><%= @listing.address_city %></p>
     <p><%= @listing.address_country %></p>
-    <p><%= @listing.description %></p>
-    <p>£<%= @listing.price %> per night</p>
+  </div>
+</div>
 
 
+<div class="column our-little-box box box-radius box-background-color box-padding box-shadow">
+    <p class="is-size-4">£<%= @listing.price %> per night</p>
+</div>
 
+<div class="column our-little-box  box box-radius box-background-color box-padding box-shadow">
+    <div class="field">
+      <label class="label is-4">Availability:</label>
+      <div class="control">
+        <div class="select">
+          <%= select_tag "availability", options_from_collection_for_select(@bookings,"id", "date")%>
+        </div>
+      </div>
+    </div>
 
-
-
-    <% @bookings.each do |booking| %>
-      <p><%= booking.date %></p>
-    <% end %>
+</div>
+<!-- end of columns-->
+  </div>
 
     <div class="content">
-     <a href="#">#css</a> <a href="#">#responsive</a>
+      <br>
+     <a href="#">#facebook</a> <a href="#">#twitter</a>
    </div>
  </div>
 </div>
