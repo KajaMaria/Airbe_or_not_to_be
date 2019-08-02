@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'requests/index'
   get 'requests/show'
   get 'requests/new'
+  get 'requests/requestsmade'
   get 'users/index'
   get 'users/show'
   get 'users/new'
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   get 'listings/show'
   get 'listings/new'
   get 'listings/edit'
+
 
   # when you visit the homepage
   get '/' => 'sessions#new'

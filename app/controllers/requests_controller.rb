@@ -3,14 +3,21 @@ class RequestsController < ApplicationController
   def index
     @requests = Request.where(user_id: session[:user_id])
 
+
+
+  end
+
+  def requestsmade
+
     @listings = Listing.where("user_id = #{session[:user_id]}")
 
     @requests_received = []
     @listings.each do |listing|
-      @requests_received << Request.where("listing_id = #{listing.id}")
+    @requests_received << Request.where("listing_id = #{listing.id}")
     end
 
     @requests_received = @requests_received.flatten
+
 
   end
 
