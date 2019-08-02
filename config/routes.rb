@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'listings/show'
   get 'listings/new'
   get 'listings/edit'
+  get 'listings/myproperties'
 
 
   # when you visit the homepage
