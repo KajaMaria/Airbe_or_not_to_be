@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'requests/index'
   get 'requests/show'
   get 'requests/new'
-  get 'requests/requestsmade'
+  get 'requests/requestsreceived'
   get 'users/index'
   get 'users/show'
   get 'users/new'

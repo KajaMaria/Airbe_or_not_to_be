@@ -7,7 +7,7 @@ class RequestsController < ApplicationController
 
   end
 
-  def requestsmade
+  def requestsreceived
 
     @listings = Listing.where("user_id = #{session[:user_id]}")
 
@@ -21,10 +21,10 @@ class RequestsController < ApplicationController
 
   end
 
-  def show
-    @request = Request.find(params[:id])
-
-  end
+  # def show
+  #   @request = Request.find(params[:id])
+  #
+  # end
 
   def new
     @listing = Listing.find(session[:listing_id])
