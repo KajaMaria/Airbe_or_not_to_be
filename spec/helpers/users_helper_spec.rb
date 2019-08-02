@@ -21,7 +21,7 @@ def signup
   fill_in 'email', with: 'thisismyemail@yahoo.com'
   fill_in 'user[phone_number]', with: '07923489393'
   fill_in 'password', with: 'password123'
-  click_button 'Create User'
+  click_button 'Sign up'
 end
 
 def login

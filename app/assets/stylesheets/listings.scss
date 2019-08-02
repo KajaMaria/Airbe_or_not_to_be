@@ -23,10 +23,15 @@ html {
 
 .card {
   background-image: image-url('picture.jpg');
+  margin: 40px;
+  background: rgba(255,255,255, 0.4);
 }
 
-footer {
-  width: 100%;
-  position: fixed;
-  bottom: -50px;
+.clever-container {
+  height:80%;
+}
+
+.title {
+
+text-align: center;
 }

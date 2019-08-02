@@ -60,6 +60,8 @@ ActiveRecord::Schema.define(version: 2019_08_01_145919) do
   create_table "requests", force: :cascade do |t|
     t.integer "user_id"
     t.integer "listing_id"
+    t.date "date"
+    t.string "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["listing_id"], name: "index_requests_on_listing_id"

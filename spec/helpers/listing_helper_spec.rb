@@ -14,6 +14,6 @@ def new_listing
   fill_in 'price', :with => "100"
   fill_in 'listing[from_date]', with: Date.new(2019,8,3)
   fill_in 'listing[to_date]', with: Date.new(2019,8,6)
-  click_button('Create Listing')
+  click_button('Create')
 
 end
