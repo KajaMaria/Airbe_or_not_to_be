@@ -11,8 +11,9 @@
 
 
 <div class="container listing-list">
+
   <% @listings.each do |listing| %>
-   
+    <% if Booking.where(listing_id: listing.id).any? %>
     <div class="card listing">
       <div class="card-content">
         <h2 class="title">
@@ -22,5 +23,26 @@
         <p hidden class="content listing-description"> <%= listing.description %> </p>
       </div>
     </div>
+    <% end %>
   <% end %>
+
+</div>
+
+<h1> unavailable properties</h1>
+<div class="container listing-list">
+
+  <% @listings.each do |listing| %>
+    <% if !Booking.where(listing_id: listing.id).any? %>
+    <div class="card listing">
+      <div class="card-content">
+        <h2 class="title">
+          <span class="listing-title"><%= link_to listing.title, listing_path(listing) %></span>
+          <span class="listing-expand-button">[+]</span>
+        </h2>
+        <p hidden class="content listing-description"> <%= listing.description %> </p>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+
 </div>

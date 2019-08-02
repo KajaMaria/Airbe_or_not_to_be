@@ -13,6 +13,7 @@
   </div>
 
 
+
   <div class="field media content">
     <p class="control title is-4"> <%= @listing.title %> </p>
       <p class="subtitle is-6"><%= @listing.description %> </p>
@@ -22,10 +23,11 @@
 
 <div>
     <p class="subtitle">
+
+
       <%= @listing.address_first_line %>
     </p>
   </div>
-
 
     <p><%= @listing.address_second_line %></p>
     <p><%= @listing.address_post_code %></p>
@@ -36,7 +38,7 @@
 
 
 
-
+<% if Booking.where(listing_id: @listing.id).any? %>
 
     <% @bookings.each do |booking| %>
       <p><%= booking.date %></p>
@@ -54,5 +56,10 @@
 </a>
 </div>
 
-
+<% else %>
+<%= "Sorry, this property is unavailable" %>
+<% end %>
+</div> 
 </div>
+
+<div>
