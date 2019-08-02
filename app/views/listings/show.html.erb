@@ -1,7 +1,10 @@
 <div class="card">
   <div class="card-image">
     <figure class="image is-4by3">
-      <img src="https://pixabay.com/get/57e8dd454c50ac14f6da8c7dda6d49214b6ac3e45657754e712c7bd296/log-cabin-1886620_1280.jpg" alt="Placeholder image">
+      <% if @listing.picture.attached? %>
+          <image src="<%=(url_for(@listing.picture))%>">
+      <% end %>
+      <!-- <img src="https://pixabay.com/get/57e8dd454c50ac14f6da8c7dda6d49214b6ac3e45657754e712c7bd296/log-cabin-1886620_1280.jpg" alt="Placeholder image"> -->
     </figure>
   </div>
 <div class="card-content">
@@ -35,6 +38,7 @@
     <p>£<%= @listing.price %> per night</p>
 
 
+    
 
 
 
