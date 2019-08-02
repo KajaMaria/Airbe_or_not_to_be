@@ -1,7 +1,17 @@
-<h1>Requests you've made</h1><br>
+
+<h1 class="title is-3">Requests you've made</h1>
+
+<div class="container is-centered add-top-margin columns multiline">
+
 
 <% @requests.each do |request| %>
-<%= Listing.find(request.listing_id).title %>
-<%= Listing.find(request.listing_id).description %>
-<%= request.message %>
+<div class="column our-little-box box is-narrow">
+<p><%= Listing.find(request.listing_id).title %></p>
+<p><%= Listing.find(request.listing_id).description %></p>
+<p><%= request.message %></p>
+<p>Status:<%= request.status %></p>
+</div>
 <% end %>
+
+</div>
+</div>

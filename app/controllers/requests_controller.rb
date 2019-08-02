@@ -36,14 +36,14 @@ class RequestsController < ApplicationController
 
   def create
     booking_id = params[:availability]
-
+    message = params[:message]
 
     booking = Booking.find(booking_id)
 
 
 
 
-    @request = Request.create(user_id: session[:user_id],date: booking.date, message: "helloo", listing_id: session[:listing_id])
+    @request = Request.create(user_id: session[:user_id],date: booking.date, message: message, listing_id: session[:listing_id])
 
     session[:listing_id] = nil
 

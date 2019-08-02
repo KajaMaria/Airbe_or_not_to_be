@@ -1,12 +1,20 @@
-<h1>Requests you've received</h1><br>
+<div class="container is-centered add-top-margin columns">
 
-<% @requests_received.each do |request| %>
-<%= Listing.find(request.listing_id).title %>
-<%= Listing.find(request.listing_id).description %>
-<%= request.message %>
-<%= request.status %>
+  <div class="column box is-narrow">
 
-  <% if request.status == "pending" %>
-    <%= button_to "Confirm", "/requests/#{request.id}", method: :patch, class: "confirm-button" %>
+<h1 class="title is-3">Requests you've received</h1><br>
+
+  <% @requests_received.each do |request| %>
+  <p><%= Listing.find(request.listing_id).title %></p>
+  <p><%= Listing.find(request.listing_id).description %></p>
+  <p><%= request.message %></p>
+  <p>Status: <%= request.status %></p>
+
+    <% if request.status == "pending" %>
+      <%= button_to "Confirm", "/requests/#{request.id}", method: :patch, class: "confirm-button button is-success" %>
+    <% end %>
+  <hr>
   <% end %>
-<% end %>
+
+  </div>
+</div>
