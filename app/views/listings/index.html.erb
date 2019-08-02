@@ -34,6 +34,7 @@
   <% @listings.each do |listing| %>
     <% if !Booking.where(listing_id: listing.id).any? %>
     <div class="card listing">
+
       <div class="card-content">
         <h2 class="title">
           <span class="listing-title"><%= link_to listing.title, listing_path(listing) %></span>
