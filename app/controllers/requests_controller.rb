@@ -2,6 +2,16 @@ class RequestsController < ApplicationController
 
   def index
     @requests = Request.where(user_id: session[:user_id])
+
+    @listings = Listing.where("user_id = #{session[:user_id]}")
+
+    @requests_received = []
+    @listings.each do |listing|
+      @requests_received << Request.where("listing_id = #{listing.id}")
+    end
+
+    @requests_received = @requests_received.flatten
+
   end
 
   def show
@@ -19,15 +29,14 @@ class RequestsController < ApplicationController
 
   def create
     booking_id = params[:availability]
-    p "!!!!!!!!!!!!!!!!!!!! #{booking_id}"
+
 
     booking = Booking.find(booking_id)
 
-    p booking.date
 
 
 
-    @request = Request.create(user_id:session[:user_id],date: booking.date, message: "helloo", listing_id: booking.listing_id)
+    @request = Request.create(user_id: session[:user_id],date: booking.date, message: "helloo", listing_id: session[:listing_id])
 
     session[:listing_id] = nil
 
@@ -38,6 +47,22 @@ class RequestsController < ApplicationController
   end
 
   def update
+
+    @request = Request.find(params[:id])
+    @request.update(status: 'approved')
+
+    @bookings = Booking.where(["date = :date and listing_id = :listing_id", { date: @request.date, listing_id: @request.listing_id}])
+
+
+    @bookings.each do |booking|
+      p "individual"
+      p booking
+    Booking.delete(booking.id)
+    end
+
+    redirect_to '/requests/index'
+
+    #  we need to delete the dates that have been requested (once approved) from the bookings table as those dates should no lonher exist once theyve been booked.
 
 
 

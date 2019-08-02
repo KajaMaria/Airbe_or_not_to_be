@@ -30,7 +30,7 @@ class ListingsController < ApplicationController
     "parsed end date is #{parsed_end}"
 
     @user = User.find(session[:user_id])
-    @listing = @user.listings.create(listing_params)
+    @listing = @user.listings.create(listing_params)  #creating a listing with the user (found with the session id) as a foreign key
 
       (parsed_start..parsed_end).each do |date|
       @booking = @listing.bookings.create(date: date, availability: true)
