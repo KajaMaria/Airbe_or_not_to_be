@@ -1,11 +1,5 @@
 
 
-
-<!-- <img src="assets/images/picture.jpg" /> -->
-
-<h1>Listings#index</h1>
-<p>Find me in app/views/listings/index.html.erb</p>
-
 <div> <% @listings.each do |listing|  %>
        <div><%= link_to listing.title, listing_path(listing) %></div>
        <% end %>

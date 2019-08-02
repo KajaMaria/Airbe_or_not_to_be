@@ -9,13 +9,19 @@ Rails.application.routes.draw do
   get 'listings/new'
   get 'listings/edit'
 
-  # get '/signup' => 'users#new'
-  # post '/users' => 'users#create'
+  # when you visit the homepage
+  get '/' => 'sessions#new'
 
+  # alternative signup paths to '/users/new'
+  get '/signup' => 'users#new'
+  get '/register' => 'users#new'
 
+  # alternative login paths
+  get '/signin' => 'sessions#new'
   get '/login' => 'sessions#new'
+
   post '/login' => 'sessions#create'
-  get '/logout' => 'sessions#destroy' 
+  get '/logout' => 'sessions#destroy'
 
   resources :listings
   resources :users
