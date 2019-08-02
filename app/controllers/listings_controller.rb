@@ -7,7 +7,9 @@ class ListingsController < ApplicationController
 
   def show
     @listing = Listing.find(params[:id])
-    p @bookings = Booking.where("listing_id = #{@listing.id}")
+    session[:listing_id] = @listing.id
+    @bookings = Booking.where("listing_id = #{@listing.id}")
+
   end
 
   def new

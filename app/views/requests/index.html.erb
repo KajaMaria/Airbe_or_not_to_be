@@ -2,5 +2,6 @@
 <p>Find me in app/views/requests/index.html.erb</p>
 
 <% @requests.each do |request| %>
-<%= request.listing_id %>
+<%= Listing.find(request.listing_id).title %>
+<%= Listing.find(request.listing_id).description %>
 <% end %>
