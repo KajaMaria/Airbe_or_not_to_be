@@ -1,16 +1,106 @@
-<h1>Listings#new</h1>
 
-<%= form_with model: @listing do |form| %>
-<%= form.text_field :address_first_line, placeholder: "address(first line)" %>
-<%= form.text_field :address_second_line, placeholder: "address(second line)" %>
-<%= form.text_field :address_post_code, placeholder: "post code" %>
-<%= form.text_field :address_city, placeholder: "city" %>
-<%= form.text_field :address_country, placeholder: "country" %>
-<%= form.text_field :title, placeholder: "title" %>
-<%= form.text_field :description, placeholder: "description" %>
-<%= form.text_field :price, placeholder: "price" %>
-<%= form.date_field :from_date, placeholder: "Start of availability" %>
-<%= form.date_field :to_date, placeholder: "End of availability" %>
-<%= form.submit %>
+<div class="container add-top-margin">
 
-<%end%>
+
+  <div class="columns is-centered">
+    <div class="column add-padding is-narrow box has-background-white box-radius box-shadow">
+
+      <p class="title is-1">List my property</p>
+
+      <%= form_with model: @listing do |form| %>
+
+      <label class="label">Title</label>
+      <div class="field">
+        <p class="control">
+          <%= form.text_field :title, class:'input',placeholder: "title" %>
+        </p>
+      </div>
+
+      <label class="label">Address</label>
+      <div class="field is-horizontal">
+        <div class="field-body">
+          <div class="field"
+            <p class="control">
+              <%= form.text_field :address_first_line, class:'input', placeholder: "address(first line)" %>
+            </p>
+          </div>
+          <div class="field">
+            <p class="control">
+              <%= form.text_field :address_second_line,class:'input', placeholder: "address(second line)" %>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-body">
+          <div class="field">
+            <p class="control">
+              <%= form.text_field :address_post_code, class:'input',placeholder: "post code" %>
+            </p>
+          </div>
+
+          <div class="field">
+            <p class="control">
+                <%= form.text_field :address_city, class:'input',placeholder: "city" %>
+            </p>
+          </div>
+
+          <div class="field">
+            <p class="control">
+              <%= form.text_field :address_country,class:'input', placeholder: "country" %>
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <label class="label">Description</label>
+      <div class="field">
+        <p class="control">
+          <%= form.text_area :description,class:'textarea', placeholder: "description" %>
+        </p>
+      </div>
+
+      <label class="label">Price per night</label>
+      <div class="field is-horizontal">
+        <div class="field-body">
+          <div class="field is-expanded">
+            <div class="field has-addons">
+              <p class="control">
+                <a class="button is-static">
+                  £
+                </a>
+              </p>
+              <p class="control is-expanded">
+                <%= form.number_field :price, class:'input',placeholder: "price" %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <p class="control">
+          <%= form.date_field :date, class: 'input', id:'datepicker' %>
+        </p>
+      </div>
+
+      <div class="field">
+          <p class="control">
+            <%= form.submit 'Create', class:'button is-success' %>
+          </p>
+      </div>
+
+      <%end%>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  var foopicker = new FooPicker({
+    id: 'datepicker'
+  });
+</script>
+
