@@ -19,6 +19,7 @@
   </div> -->
 
 
+
   <div class="field media content">
     <!-- <p class="control title is-3"> <%= @listing.title %> </p> -->
       <p class="subtitle pacifico is-1">"<%= @listing.description %>"</p>
@@ -31,6 +32,7 @@
   <p class="control subtitle is-3"> <%= @listing.title %></p>
   <div class="is-size-4">
     <p> <%= @listing.address_first_line %> </p>
+
     <p><%= @listing.address_second_line %></p>
     <p><%= @listing.address_post_code %></p>
     <p><%= @listing.address_city %></p>
@@ -38,6 +40,9 @@
   </div>
 </div>
 
+
+
+<% if Booking.where(listing_id: @listing.id).any? %>
 
 <div class="column our-little-box box box-radius box-background-color box-padding box-shadow">
     <p class="is-size-4">£<%= @listing.price %> per night</p>
@@ -52,6 +57,7 @@
         </div>
       </div>
     </div>
+
 
 </div>
 <!-- end of columns-->
@@ -70,5 +76,10 @@
 </a>
 </div>
 
-
+<% else %>
+<%= "Sorry, this property is unavailable" %>
+<% end %>
+</div> 
 </div>
+
+<div>

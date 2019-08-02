@@ -8,7 +8,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+<div class="wrapper">
   <body>
 
     <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -42,10 +42,13 @@
 
             <div class="navbar-dropdown">
               <%=link_to('List my property', '/listings/new', method: :get, class: 'navbar-item')%>
-              <%=link_to('Requests I\'ve sent', '/requests', method: :get, class: 'navbar-item')%>
-              <a class="navbar-item">
+                <%=link_to('View my properties', '/listings/myproperties', method: :get, class: 'navbar-item')%>
+              <%=link_to('Requests I\'ve sent', '/requests/index', method: :get, class: 'navbar-item')%>
+                <%=link_to('Requests I\'ve received', '/requests/requestsreceived', method: :get, class: 'navbar-item')%>
+
+              <!-- <a class="navbar-item">
                 Requests I've received
-              </a>
+              </a> -->
               <hr class="navbar-divider">
               <a class="navbar-item">
                 Report an issue
@@ -86,7 +89,9 @@
 
   </body>
 
-  <!-- <footer class="footer">
+</div>
+  
+  <footer class="footer">
 <div class="content has-text-centered">
   <p>
     <strong>Team Awesome</strong> by <a href="https://github.com/KajaMaria/Airbe_or_not_to_be">Welcome to this pretty page</a>.
@@ -94,6 +99,6 @@
     is awesome <a href="https://github.com/KajaMaria/Airbe_or_not_to_be"></a>.
   </p>
 </div>
-</footer> -->
+</footer> 
 
 </html>

@@ -1,0 +1,12 @@
+<h1>Requests you've received</h1><br>
+
+<% @requests_received.each do |request| %>
+<%= Listing.find(request.listing_id).title %>
+<%= Listing.find(request.listing_id).description %>
+<%= request.message %>
+<%= request.status %>
+
+  <% if request.status == "pending" %>
+    <%= button_to "Confirm", "/requests/#{request.id}", method: :patch, class: "confirm-button" %>
+  <% end %>
+<% end %>

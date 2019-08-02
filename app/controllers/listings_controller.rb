@@ -5,6 +5,11 @@ class ListingsController < ApplicationController
 
   end
 
+  def myproperties
+    @mylistings = Listing.where(user_id: session[:id])
+
+  end
+
   def show
     @listing = Listing.find(params[:id])
     session[:listing_id] = @listing.id
