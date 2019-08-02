@@ -1,13 +1,71 @@
-<%= flash[:warning] %>
 
-<h1>Welcome to Fight Club! </h1>
 
-<%= form_with model: @user do |form| %>
-  <%= form.text_field :username, placeholder: "username" %>
-  <%= form.text_field :name, placeholder: "name" %>
-  <%= form.email_field :email, placeholder: "email" %>
-  <%= form.telephone_field :phone_number, placeholder: "number" %>
-  <%= form.password_field :password, placeholder: "password" %>
+<div class="container add-top-margin">
+  <div class="columns is-centered">
+    <div class="column add-padding is-narrow box has-background-white box-radius box-shadow">
 
-  <%= form.submit %>
-<% end %>
+      <p class="title is-3"><%= flash[:warning] %></p>
+      <p class="title is-1">Sign up</p>
+
+      <%= form_with model: @user do |form| %>
+        <div class="field">
+          <label class="label">Username</label>
+          <div class="control">
+            <%= form.text_field :username, class: 'input', placeholder: "username" %>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control">
+            <%= form.text_field :name, class: 'input', placeholder: "name" %>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control has-icons-left has-icons-right">
+            <%= form.email_field :email, class: 'input', placeholder: "email" %>
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Phone Number</label>
+          <div class="field-body">
+            <div class="field is-expanded">
+              <div class="field has-addons">
+                <p class="control">
+                  <a class="button is-static">
+                    +44
+                  </a>
+                </p>
+                <p class="control is-expanded">
+                  <%= form.telephone_field :phone_number, class:'input', placeholder: "number" %>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Password</label>
+          <p class="control has-icons-left">
+            <%= form.password_field :password, class: 'input', placeholder: "password" %>
+          <span class="icon is-small is-left">
+            <i class="fas fa-lock"></i>
+          </span>
+          </p>
+        </div>
+        <div class="field">
+          <p class="control">
+            <%= form.submit 'Sign up', class:'button is-success' %>
+          </p>
+        </div>
+
+
+      <% end %>
+
+    </div>
+  </div>
+</div>

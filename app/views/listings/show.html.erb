@@ -1,8 +1,32 @@
+<div class="card">
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <img src="https://pixabay.com/get/57e8dd454c50ac14f6da8c7dda6d49214b6ac3e45657754e712c7bd296/log-cabin-1886620_1280.jpg" alt="Placeholder image">
+    </figure>
+  </div>
+<div class="card-content">
+<div class="media">
+  <div class="media-left">
+    <figure class="image is-24x24">
+
+    </figure>
+  </div>
+
+
+  <div class="field media content">
+    <p class="control title is-4"> <%= @listing.title %> </p>
+      <p class="subtitle is-6"><%= @listing.description %> </p>
+  </div>
+</div>
+
+
 <div>
+    <p class="subtitle">
+      <%= @listing.address_first_line %>
+    </p>
+  </div>
 
 
-    <h1><%= @listing.title %></h1>
-    <p><%= @listing.address_first_line %></p>
     <p><%= @listing.address_second_line %></p>
     <p><%= @listing.address_post_code %></p>
     <p><%= @listing.address_city %></p>
@@ -18,7 +42,17 @@
       <p><%= booking.date %></p>
     <% end %>
 
-    <%= button_to "Make a request", '/requests/new', method: :get %>
+    <div class="content">
+     <a href="#">#css</a> <a href="#">#responsive</a>
+   </div>
+ </div>
+</div>
+
+<div>
+<a >
+  <%= button_to "Make a request", '/requests/new', method: :get, class: "button is-danger is-large is-fullwidth"%>
+</a>
+</div>
 
 
 </div>

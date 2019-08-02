@@ -15,7 +15,7 @@ feature "expect to reject non-email entries in email field" do
     fill_in 'email', with: 'thisismyemailyahoocom'
     fill_in 'user[phone_number]', with: '07923489392'
     fill_in 'password', with: 'password123'
-    click_button 'Create User'
+    click_button 'Sign up'
     expect(page).not_to have_content('iamanewuser')
   end
 end
