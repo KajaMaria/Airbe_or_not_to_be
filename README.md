@@ -81,4 +81,6 @@ I will still be able to book somewhere that has not yet been confirmed by the ow
 
 ## Feedback
 We are very happy of what we have accomplished in a given timeframe
+
+
 Feeling proud 😊 ❤️
