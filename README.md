@@ -23,8 +23,13 @@ To start the server (http://localhost:3000/)
 > rails s
 ```
 
+
+
+## User Stories 📓 
+
+
 ```
-User Stories 📓
+
 As a user
 So I can make money from my property
 I want to be able to list the property on the site - including name of space, description of space and price per night
@@ -69,3 +74,11 @@ As a holidaymaker
 So I can book a place to stay
 I will still be able to book somewhere that has not yet been confirmed by the owner
 ```
+
+
+
+
+
+## Feedback
+We are very happy of what we have accomplished in a given timeframe
+Feeling proud 😊 ❤️
